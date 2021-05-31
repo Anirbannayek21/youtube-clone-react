@@ -1,0 +1,149 @@
+@import"../../screen/homeScreen/base";
+
+.sidebar{
+    
+    .link{
+        text-decoration: none;
+        // color: white;
+    }   
+    .header{
+        display: none;
+    }
+    background-color: $black-secondary;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 90vh;
+    padding-top: 1rem;
+    transition: transform 0.2s ease-in;
+    overflow-x: scroll;
+    z-index: 1000;
+
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+
+
+    li{
+        display: flex;
+        align-items: center;
+
+        padding: 0.6rem 1.5rem;
+        cursor: pointer;
+
+        span{
+            margin-left: 1rem;
+            font-size: small;
+            color: white;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+        }
+
+        &:hover{
+            background-color: $border-color;
+        }
+    }
+
+    hr{
+        background-color: $border-color;
+        border: none; 
+        opacity: 1;
+        border-bottom: 1px solid $border-color;
+    }
+
+    &.open{
+        transform: translateX(0) !important;
+        z-index: 10000;
+    }
+}
+
+@media (max-width:$breakpoint-medium) {
+    .sidebar{
+        width: 80px;
+        .mdNoswn{
+            display: none;
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            
+            margin-top: 10px;
+            margin-bottom: 10px;
+            span{
+                color: $text-color;
+                margin-top: 3px;
+                font-size: 11px;
+                margin-left: 0;
+                align-items: center;
+            }
+        }
+        hr{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:$breakpoint-small) {
+    .sidebar{
+        transform: translateX(-100%) !important;
+        position: fixed;
+        z-index: 1000;
+        width: 250px;
+        height: 100vh;
+        .header{
+            display: block;
+            display: flex; 
+            justify-content: flex-start;
+            .menu{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            .logo{
+                margin: 0;
+                color: white;
+                display: flex;
+                img{
+                    margin: 0;
+                    width: 30px;
+                    object-fit: contain;
+                    display: block;
+                    margin-right: 3px;
+                }
+                h5{
+                    margin: auto;
+                    font-weight:400;
+                    margin-right: 3px;
+                    letter-spacing: -3px;
+                }
+            }
+        }
+        .start{
+            margin-top: 30px;
+        }
+        .mdNoswn{
+            display: block;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            padding: 0.6rem 1.5rem;
+            margin: 0.2rem 0;
+            cursor: pointer;
+
+            span{
+                font-size: 16px;
+                margin-left: 1rem;
+                color: white;
+                font-weight: 500;
+                letter-spacing: 0.4px;
+            }
+        }
+        hr{
+            display: block;
+        }
+
+    }
+
+}

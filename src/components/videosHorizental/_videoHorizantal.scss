@@ -1,0 +1,52 @@
+@import "../../screen/homeScreen/base";
+
+.videoHor{
+    cursor: pointer;
+    margin: 100px;
+
+    &_left{
+        position: relative;
+        text-align: center;
+
+        &_thubmnail{
+            width: 100% ;
+
+            &_wrapper{
+                width: 100%;
+            }
+        }
+
+        &_duration{
+            position: absolute ;
+            bottom: 0.1rem;
+            right: 1rem;
+            background-color: #080808eC;
+            font-size: small;
+            font-weight: bold;
+            padding: 0.1rem;
+            border-radius: 5px;
+        }
+    }
+
+    
+
+    
+
+
+    &_title{
+        margin-top: 0;
+        font-size: 15px;
+        color: #fff;
+        letter-spacing: 0.1px;
+
+        @include line-clamp(2)
+    }
+
+    &_details{
+        h6{
+            font-size: 13px;
+            margin: 0;
+        }
+        font-size: 13px;
+    }
+}

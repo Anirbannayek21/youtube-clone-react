@@ -1,0 +1,34 @@
+@import"../homeScreen/base";
+
+.watchScreen{
+    margin: 0;
+    padding: 0;
+    padding-top: 13vh;
+    height: 100vh;
+    width: 100vw;
+
+    
+
+    &_player{
+        height: 60vh;
+    }
+
+    &_sidebar{
+        // transform: translate(-100%);
+        position: fixed;
+        top: 8vh;
+        z-index: 10000;
+    }
+}
+
+@media (max-width:$breakpoint-small) {
+    .watchScreen{
+    &_sidebar{
+        // transform: translate(-100%);
+        position: absolute;
+        top: 0;
+        z-index: 10000;
+    }
+    
+    }
+}

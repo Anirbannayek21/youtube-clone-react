@@ -1,0 +1,52 @@
+@import"../../screen/homeScreen/base";
+
+.video{
+    margin-bottom: 1rem;
+    padding-top: 0.3rem;
+
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &_top{
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        position: relative;
+        img{
+            width: 100%;
+        }
+
+        &_duration{
+            position: absolute;
+            bottom: 0.3rem;
+            right:0.3rem;
+            font-size: small;
+            font-weight: bold;
+            background-color: #080808eC;
+            padding: 0.1rem;
+            border-radius: 3px;
+        }
+    }
+    .channel-logo{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    &_title{
+        font-size: 0.9rem;
+        color:white;
+        @include line-clamp(2);
+        margin-bottom: .2rem;
+    }
+
+    &_views{
+        font-size: 0.8rem;
+        @include line-clamp(1);
+    }
+
+    &_channel{
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,91 @@
+@import "../homeScreen/base";
+
+
+.subcriptionapp_container{
+    display: flex;
+    height: 90vh;
+
+    .subcriptionapp_sidebar{
+        position: fixed;
+        top: 8vh;
+        left: 0;
+        
+    }
+
+    .subcriptionapp_main{
+        margin-top:5rem !important;
+        position: absolute;
+        right: 0;
+        margin-top: 8.4vh;
+        width: 85vw;
+        padding: 0;
+    }
+}
+.horChannel{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    &_left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 80%;
+            border-radius: 50%;
+        }
+    }
+
+    &_right{
+        h3{
+            color: white;
+        }
+        width: 70% !important;
+        position: relative;
+        margin-top: 1.5rem;
+        &_description{
+            @include line-clamp(2);
+        }
+
+        &_video{
+            color: white;
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+}
+
+
+@media (max-width:$breakpoint-medium) {
+    .subcriptionapp_container{
+        .subcriptionapp_main{
+            width: calc(100% - 80px);
+        }
+    }
+}
+
+@media (max-width:$breakpoint-small) {
+    .subcriptionapp_container{
+        .subcriptionapp_main{
+            width: 100vw;
+        }
+    }
+
+    .horChannel{
+        display: flex ;
+            // flex-direction: column;
+        justify-content: center ;
+        align-items: center ;
+        &_right{
+            width: 90% !important;
+            display: flex ;
+            flex-direction: column;
+            justify-content: center ;
+            align-items: center ;
+            span{
+                text-align: center;
+                position: unset;
+            }
+        }
+    }
+}

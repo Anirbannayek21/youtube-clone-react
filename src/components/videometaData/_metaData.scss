@@ -1,0 +1,59 @@
+@import"../../screen/homeScreen/base";
+
+.like{
+    margin-left: 1rem;
+    span{
+        margin: auto;
+    }
+}
+
+.subbutton{
+    height: 2.5rem;
+    width: 20vh;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.subscribed{
+    background-color: $border-color;
+    color: #fff;
+    &:hover{
+        background-color: $border-color;
+        color: #fff;
+    }
+}
+.videometaData_top{
+    h5{
+        color: #fff;
+    }
+}
+.videometaData_channel{
+    img{
+        height: 44px;
+        width: 44px;
+        border: none;
+        border-radius: 50%;
+    }
+    h6{
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .sub{
+        font-size: 14px;
+    }
+}
+
+
+.videometaData_description{
+    .showMoreText{
+        text-decoration: none;
+        color: $text-color;
+        // color: #fff;
+        display: block;
+        margin: 1rem 0;
+        font-weight: 500;
+    }
+}

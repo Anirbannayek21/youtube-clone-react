@@ -1,0 +1,42 @@
+@import"../homeScreen/base";
+
+.searchapp_container{
+    display: flex;
+    height: 90vh;
+
+    .searchapp_sidebar{
+        position: fixed;
+        top: 8vh;
+        left: 0;
+        
+    }
+
+    .searchapp_main{
+        margin-top:5rem !important;
+        position: absolute;
+        right: 0;
+        margin-top: 8.4vh;
+        width: 82vw;
+        padding: 0;
+    }
+}
+
+@media (max-width:$breakpoint-medium) {
+    .searchapp_container{
+        .searchapp_main{
+            width: calc(100% - 80px);
+        }
+    }
+}
+
+@media (max-width:$breakpoint-small) {
+    .searchapp_container{
+        .app_main{
+            width: 100vw;
+        }
+        .app_sidebar{
+        top: 0;
+        z-index: 99999;
+        }
+    }
+}
