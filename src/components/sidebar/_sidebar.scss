@@ -4,7 +4,8 @@
     
     .link{
         text-decoration: none;
-        // color: white;
+        color: white !important;
+        background-color: $border-color;
     }   
     .header{
         display: none;
@@ -24,9 +25,10 @@
     }
 
 
-    li{
+    .li{
         display: flex;
         align-items: center;
+        text-decoration: none;
 
         padding: 0.6rem 1.5rem;
         cursor: pointer;
@@ -34,7 +36,7 @@
         span{
             margin-left: 1rem;
             font-size: small;
-            color: white;
+            color: white !important;
             font-weight: 500;
             letter-spacing: 0.4px;
         }

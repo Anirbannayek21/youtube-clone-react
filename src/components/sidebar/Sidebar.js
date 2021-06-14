@@ -33,62 +33,60 @@ const Sidebar = ({ sidebar, handleOff, notShow }) => {
                 </div>
             </div>
             <div className="start">
-                <li onClick={() => handleOff()}>
-                    <MdHome size={25} />
+                <NavLink className="li" to="/" exact activeClassName="link" onClick={() => handleOff()}>
+                    <MdHome size={25} color="#b1bdb4" />
                     <span>Home</span>
-                </li>
-                <li onClick={() => handleOff()}>
+                </NavLink>
+                <div to="#" exact activeClassName="link" className="li" onClick={() => handleOff()}>
                     <MdExplore size={25} />
                     <span>Explore</span>
-                </li>
-                <NavLink to="/feed/subcription" className="link">
-                    <li onClick={() => handleOff()} >
-                        <MdSubscriptions size={25} />
-                        <span>Subscriptions</span>
-                    </li>
+                </div>
+                <NavLink className="li" onClick={() => handleOff()} to="/feed/subcription" exact activeClassName="link">
+                    <MdSubscriptions size={25} color="#b1bdb4" />
+                    <span>Subscriptions</span>
                 </NavLink>
                 <hr />
-                <li onClick={() => handleOff()}>
+                <div className="li" onClick={() => handleOff()}>
                     <MdVideoLibrary size={25} />
                     <span>Library</span>
-                </li>
-                <li className="mdNoswn" onClick={() => handleOff()}>
+                </div>
+                <div className="li mdNoswn" onClick={() => handleOff()}>
                     <MdHistory size={25} />
                     <span>History</span>
-                </li>
-                <li className="mdNoswn" onClick={() => handleOff()}>
+                </div>
+                <div className="li mdNoswn" onClick={() => handleOff()}>
                     <MdWatchLater size={25} />
                     <span>WatchLater</span>
-                </li>
+                </div>
 
-                <li className="mdNoswn" onClick={() => handleOff()}>
+                <div className="li mdNoswn" onClick={() => handleOff()}>
                     <MdThumbUp size={25} />
                     <span>liked Video</span>
-                </li>
+                </div>
 
 
                 <hr />
-                <li className="mdNoswn">
+                <div className="li mdNoswn">
                     <MdSettings size={25} />
                     <span>Settings</span>
-                </li>
-                <li className="mdNoswn">
+                </div>
+                <div className="li mdNoswn">
                     <MdFlag size={25} />
                     <span>Report history</span>
-                </li>
-                <li className="mdNoswn">
+                </div>
+                <div className="li mdNoswn">
                     <MdHelp size={25} />
                     <span>Help</span>
-                </li>
-                <li className="mdNoswn">
+                </div>
+                <div className="li mdNoswn">
                     <MdFeedback size={25} />
                     <span>Report feedback</span>
-                </li>
+                </div>
                 <hr />
-                <li onClick={() => logoutHandler()}>
+                <div className="li" onClick={() => logoutHandler()}>
                     <MdExitToApp size={25} />
                     <span>logout</span>
-                </li>
+                </div>
             </div>
         </nav>
     )
